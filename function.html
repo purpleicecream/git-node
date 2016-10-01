@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+
+    <script type = "text/javascript">
+        function f1(){
+            var name = "php06089";
+            var time  = "2016";
+            var is = "false";
+
+            function f2(){
+                console.log( "I belong to f2" );
+            }
+            return f2;
+        }
+
+        var ff = f1();
+        ff(); //f1把f2返回给ff是一个引用，所以ff（）可以执行
+        f1();
+        //f2();这里不在f2的作用域之中
+    </script>
+
+</head>
+<body>
+
+
+</body>
+</html>

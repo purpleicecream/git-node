@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单验证</title>
+    <script type = "text/javascript">
+        window.onload = function(){
+            var fm = document.getElementsByTagName( 'form' )[0];
+            console.log(fm);
+            fm.onsubmit = function(){
+                // 验证邮箱
+                var email = document.getElementById( "usermail").value;
+                var emailreg =  /^[a-zA-Z1-9][0-9A-Za-z\._]+@[0-9a-z]+(\.[a-z]+)+$/;
+                if( email.match( emailreg ) == null ){
+                    alert("邮箱格式不正确");
+                    return false;
+                }
+            }
+        };
+
+    </script>
+</head>
+<body>
+<h2>注册表单</h2>
+<form method = "post" action = "09.php">
+    <p>用户名：<input type = "text" id = "username" /></p>
+    <p>邮&nbsp箱：<input type = "text" id = "usermail" /></p>
+    <p>手机号：<input type = "text" id = "usertel" /></p>
+    <p><input type = "submit" value = "注册"/></p>
+</form>
+</body>
+</html>

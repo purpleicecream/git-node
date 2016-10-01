@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+</head>
+<body>
+<h2>事件对象的作用</h2>
+
+<form action = "" method = "past">
+    <p>用户名：<input type = "text" name = "username"></p>
+    <p>密&nbsp码：<input type = "text" name = "pwd"></p>
+    <p>邮&nbsp箱：<input type = "text" name = "email"></p>
+    <p><input type = "submit" name = "注册"></p>
+</form>
+</body>
+</html>
+
+<script>
+    var fm = document.getElementsByTagName( "form" )[0];
+
+    fm.addEventListener( "submit", function( eve ){
+        alert( "邮箱格式不正确" );
+        eve.preventDefault();
+    })
+</script>

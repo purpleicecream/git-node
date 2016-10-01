@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Call函数</title>
+
+</head>
+<body>
+
+<script>
+    function getInfo(){
+        console.log( this.mingzi + "在爬树" );
+    }
+
+    var cat = { mingzi: "波斯猫" };
+    getInfo.call( cat );
+
+    var dog = { mingzi: "德国黑背" };
+    getInfo.call( dog );
+
+    function f1(addr, age){
+        console.log( "名字:" + this.mingzi + '<br/>'  + "地址：" + addr + '.<br>.' + "年龄：" + age );
+    }
+    var perl = { mingzi: "tom" };
+    f1.call( perl, "newyork", 21 );
+
+</script>
+
+</body>
+</html>

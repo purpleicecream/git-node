@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>匹配ip地址</title>
+
+    <script type = "text/javascript">
+        var str = "167";
+        var reg = /^[1-9]|[1-9]\d|1\d\d|2[01]\d|22[0-3]$/;
+
+        var rst = str.match( reg );
+        console.log( rst );
+
+
+        var str1 = "244";
+        var reg1 = /^\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]$/;
+
+        var rst1 = str1.match( reg1 );
+        console.log( rst1 );
+
+
+        var strip = "34.132.122.220";
+        var ipreg =  /^([1-9]|[1-9]\d|1\d\d|2[01]\d|22[0-3])(\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])){3}$/;
+
+        var rstip = strip.match( ipreg );
+        console.log( rstip );
+    </script>
+
+
+    //验证邮箱
+    <script>
+
+        var str = "hello@163.com";
+        var str = "purplricecream520@gmail.com";
+        var reg = /^[a-zA-Z1-9][0-9A-Za-z\._]+@[0-9a-z]+(\.[a-z]+)+$/;
+        var rst = str.match( reg );
+        console.log( rst );
+    </script>
+</head>
+<body>
+
+</body>
+</html>

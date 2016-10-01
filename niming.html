@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>n匿名函数</title>
+
+    <script type = "text/javascript">
+        //匿名函数子调用
+        //变量赋值方式
+        var  getInfo = function(){
+            console.log( "It is a fine day today" );
+        };
+        getInfo();//It is a fine day today
+
+        //死的一下匿名函数执行
+        //特点： 程序代码没有停顿，立即执行
+        //好处：可以避免变量污染
+        (function(title){
+            console.log( "I have no name "  + title );
+        })("JavaScript");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

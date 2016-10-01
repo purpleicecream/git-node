@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子节点和兄弟节点</title>
+</head>
+<body>
+<h2>
+    子节点和兄弟节点
+</h2>
+<ul>
+    <li>上海</li>
+    <li>背景</li>
+    <li>官洲</li>
+    <li>成都</li>
+</ul>
+</body>
+</html>
+
+<script type = "text/javascript">
+    //①childNodes:父节点获得内部全部子节点
+    var ull = document.getElementsByTagName( 'ul' )[0];
+    console.log( ull.childNodes ) ;
+
+    console.log( ull.childNodes.length );
+
+    //兄弟节点
+    var guang = document.getElementsByTagName("li")[2];
+    console.log(guang.nextSibling.nextSibling);
+    console.log( guang.previousSibling.previousSibling );
+
+    //子节点
+    var hh = document.getElementsByTagName("h2")[0];
+    console.log( hh.firstChild );
+
+
+</script>

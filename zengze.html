@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则特别字符集</title>
+</head>
+<body>
+<script type = "text/javascript">
+
+    var str = "xiaoming likes banana";
+    var reg = /^banana/;
+    var reg = /banana$/;
+    var reg =/^xiaoming/;
+
+    var rst = str.match(reg);
+    console.log( rst );
+
+    var str = "123.32-*";
+    var reg = /[0-9]+\.[0-9]+-\*/;
+
+    var rst = str.match(reg);
+    console.log( rst );
+
+    var str = "13253596521okok";
+    //{m}前面单元严格出现m次；
+    var reg = /^13[0-9]{9}$/;
+
+    var rst = str.match(reg);
+    console.log( rst );
+
+    var str = "2424898250@qq.com";
+    var reg = /^[0-9]*@qq.com$/;
+
+    var rst = str.match(reg);
+    console.log( rst );
+
+</script>
+
+<script>
+
+    var str = "gogogogogle";
+    var reg = /(go)+gle/;
+
+    var rst = str.match(reg);
+    console.log( rst );
+
+
+    var str =  "<p>用户名：<input type = ></p>";
+    var reg = /<.*>(.*)<.*><.*>/;
+
+    var rst = str.match(reg);
+    console.log( rst );
+    console.log( rst[1]);
+
+</script>
+</body>
+</html>

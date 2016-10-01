@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式</title>
+
+    <script type = "text/javascript">
+        //被匹配的大量字符串，正则表达式
+        var str = "hello world";
+        var teg = /world/;
+        var rst = str.match(teg);
+        console.log(rst);
+    </script>
+
+    <script>
+        //没有特殊说明就是“单次”匹配，从字符串左侧找到第一个符合模式的内容
+        var str = "Today and Yesterday";
+        var reg = /[c-g]/;
+
+        var reg = /[a-z]/;
+        var rst = str.match( reg );
+        console.log( rst );
+    </script>
+
+    <script>
+        var str = "2015-8-10";
+        var reg = /[0-9]*/;
+
+        var str = "Today is 810";
+        var reg = /[0-9]+/;
+
+
+        var str = "llkjlkj;lggle";
+        var reg =/go*gle/;
+
+
+
+        var rst = str.match( reg );
+        console.log( rst );
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body>
+
+<form>
+    <h2>获取元素节点</h2>
+    <input type = "text" id = "username" name = "mingzi" value = "yu">
+    <input type = "text" id  = "usermail"  name = "youxiang"value = "ijo@.com">
+    <input type = "text" id = "usertel" name = "dianhua" value = "110">
+</form>
+
+
+
+
+</body>
+</html>
+
+<script>
+   /* var hh = document.getElementsByTagName( "h2" );
+    console.log( hh );
+    console.log( hh[0] );
+
+    var its = document.getElementsByTagName( "input" );
+    console.log( its );
+    console.log( its[2] );
+    console.log( its.item[1] );*/
+
+   //不推荐使用，有的浏览器针对form表单域才可以使用
+    var email = document.getElementsByName( "youxiang" );
+    console.log( email[0] );
+    console.log( email.item[0] );
+</script>

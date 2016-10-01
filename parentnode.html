@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建与添加接点</title>
+</head>
+<body>
+<!--<h2>父节点</h2>
+<ul>
+    <li>上海</li>
+    <li>背景</li>
+    <li>官洲</li>
+    <li>成都</li>
+</ul>-->
+</body>
+</html>
+
+<script type = "text/javascript">
+    var ull = document.createElement("ul");
+    var province = ['吉林', '辽宁', '黑龙江'];
+    var city = ['长春', '沈阳', '哈尔滨'];
+    for ( var i in province ){
+        var lli = document.createElement("li");
+        var txt = document.createTextNode(province[i]);
+        lli.setAttribute( 'city', city[i] );
+        lli.appendChild( txt );
+        ull.appendChild( lli );
+    }
+    document.getElementsByTagName('body')[0].appendChild( ull );
+</script>
+
